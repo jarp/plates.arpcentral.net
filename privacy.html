@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plates Privacy Policy</title>
+  <meta name="description" content="What the Plates Android app collects, why, who it is shared with, and how to delete your account and data.">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <style>
+    :root {
+      --plate-blue: #244A95;
+      --ring-navy: #002D72;
+      --night-blue: #121A2B;
+      --amber: #F2A93B;
+      --amber-dark: #D98A1E;
+      --teal: #2E8C8C;
+      --sheeting: #F4F1EA;
+      --disc-grey: #CCCCCC;
+      --bg: var(--sheeting);
+      --fg: #1B1B1F;
+      --muted: #47464A;
+      --card: #FFFFFF;
+      --link: var(--plate-blue);
+      --accent-text: var(--amber-dark);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--night-blue);
+        --fg: #E4E2DD;
+        --muted: #C4C7D2;
+        --card: #1C2740;
+        --link: #9DB6EE;
+        --accent-text: var(--amber);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Avenir Next", Avenir, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    a { color: var(--link); }
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 0 16px; }
+
+    header.hero {
+      background: linear-gradient(115deg, var(--night-blue) 0%, var(--plate-blue) 100%);
+      color: var(--sheeting);
+      padding: 24px 0 40px;
+    }
+    header.hero img.feature {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+    .cta {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--amber);
+      color: var(--night-blue);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+    }
+    .btn:hover { background: #F7BB5E; }
+    .cta p { margin: 0; color: #D6E0F7; }
+
+    section { padding: 40px 0; }
+    section + section { border-top: 1px solid rgba(128, 128, 128, 0.25); }
+    h1, h2 { margin: 0 0 12px; line-height: 1.2; }
+    h2 { font-size: 1.6rem; }
+    .lead { font-size: 1.15rem; max-width: 46rem; margin: 0; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .step {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .step .num {
+      display: inline-block;
+      width: 32px; height: 32px; line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--plate-blue);
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .step p { margin: 0; color: var(--muted); }
+    .points { color: var(--accent-text); font-weight: 700; }
+
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      max-width: 620px;
+    }
+    .shots img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    .shots figcaption { margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+
+    footer {
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(128, 128, 128, 0.25);
+    }
+    footer p { margin: 4px 0; }
+  </style>
+  <style>
+    .policy { max-width: 46rem; }
+    .policy h2 { font-size: 1.35rem; margin-top: 32px; }
+    .policy h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+    .policy p, .policy li { color: var(--fg); }
+    .policy table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 0.95rem; }
+    .policy th, .policy td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid rgba(128, 128, 128, 0.3); }
+    .policy th { color: var(--muted); font-weight: 600; }
+    .topbar { display: flex; align-items: center; gap: 12px; padding: 16px 0; }
+    .topbar img { width: 40px; height: 40px; border-radius: 10px; }
+    .topbar a { color: var(--sheeting); text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+    .updated { color: var(--muted); margin: 0 0 24px; }
+  </style>
+</head>
+<body>
+  <header class="hero" style="padding: 0 0 8px">
+    <div class="wrap topbar">
+      <img src="images/icon-192.png" alt="">
+      <a href="index.html">Plates</a>
+    </div>
+  </header>
+
+  <main class="wrap policy">
+    <section>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated 22 September 2026</p>
+
+      <p>Plates is a licence plate game for Android published by arpcentral.net (referred to below as "we").
+        This policy explains what information the app collects, why, who it is shared with, and how to delete it.
+        It applies to the Plates Android app (package <code>net.arpcentral.tectonics</code>) and the game
+        service it talks to at tectonic-api.arpcentral.net.</p>
+
+      <h2>What we collect</h2>
+
+      <h3>Account information</h3>
+      <p>Plates uses Google Sign-In. When you sign in, Google gives us your email address, your first and last
+        name, and the URL of your Google profile picture. We store these on our server so your games sync across
+        devices and so your teammates can see who is in a game. We do not receive your Google password.</p>
+
+      <h3>Location</h3>
+      <p>Plates asks for precise location permission. Location is used in two ways:</p>
+      <ul>
+        <li><strong>Scoring.</strong> When you log a plate, the app records your location at that moment. Points are
+          calculated from the distance between that point and the plate's home state. Location is only read while a
+          game screen is open in the foreground. The app does not track your location in the background.</li>
+        <li><strong>Map trail.</strong> The latitude and longitude of each find is saved with the find so the Map tab can
+          show where each plate was spotted. Everyone seated in that game can see the trail.</li>
+      </ul>
+      <p>To calculate driving distance, our server sends the coordinates of a find, without your name or email, to the
+        Google Distance Matrix API. The map itself is drawn by the Google Maps SDK, which is subject to
+        <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+
+      <h3>Game data</h3>
+      <p>We store the games and trips you create or join, their titles, the plates you find, points, timestamps,
+        bonus plates, and a timeline of finds. This is the content of the game and is visible to the other players
+        seated in it.</p>
+
+      <h3>Invitations</h3>
+      <p>When you invite someone by email, we store that address and send them a one-time invitation email from a
+        no-reply address. If they never sign in, the address is kept only so the invitation can be accepted.</p>
+
+      <h3>Voice input</h3>
+      <p>Tapping the microphone opens the speech recognition dialog built into Android, provided by your device's
+        speech service (usually Google). Plates does not hold the microphone permission and never records audio.
+        It receives only the recognised text, matches it against the list of states, and discards it. Spoken
+        responses use your device's text-to-speech engine on the device.</p>
+
+      <h3>Analytics</h3>
+      <p>Plates uses Google Analytics for Firebase to understand how the app is used. It reports which screens
+        are opened, along with device model, operating system version, app version, country, and a random
+        installation identifier. Analytics does not receive your name, email, location, or game content. See
+        <a href="https://firebase.google.com/support/privacy">Firebase's privacy information</a> for how Google
+        handles this data.</p>
+
+      <h3>What we do not collect</h3>
+      <p>Plates has no advertising, no in-app purchases, and no third-party ad or tracking SDKs. We do not collect
+        contacts, photos, files, messages, or health data. We do not sell personal information.</p>
+
+      <h2>Summary of data and purposes</h2>
+      <table>
+        <tr><th>Data</th><th>Why</th><th>Shared with</th></tr>
+        <tr><td>Email, name, profile picture</td><td>Sign-in, syncing, showing players in a game</td><td>Other players in your games</td></tr>
+        <tr><td>Precise location at each find</td><td>Scoring and the map trail</td><td>Other players in your games; coordinates only to Google Distance Matrix</td></tr>
+        <tr><td>Games, finds, points, timeline</td><td>Running the game</td><td>Other players in your games</td></tr>
+        <tr><td>Invitee email addresses</td><td>Sending invitations</td><td>Our email delivery provider (Amazon SES)</td></tr>
+        <tr><td>Screen views, device and app version</td><td>Analytics</td><td>Google Analytics for Firebase</td></tr>
+      </table>
+
+      <h2>Where data is stored</h2>
+      <p>Game data is stored on our server, hosted on Amazon Web Services in the United States. The app also keeps a
+        local copy of your games on your device so you can play offline, and stores your sign-in token in
+        encrypted app storage. The connection between the app and the server uses HTTPS.</p>
+
+      <h2>How long we keep it</h2>
+      <p>Games and finds are kept until you delete the game or your account. Finished games keep their results and
+        map so you can look back at a trip. Sign-in tokens are removed when you sign out. Analytics data is retained
+        by Google according to Firebase's default settings.</p>
+
+      <h2>Deleting your data</h2>
+      <ul>
+        <li><strong>Delete a game.</strong> Game owners can delete a game from the games list. This removes its finds,
+          locations, and timeline for every player.</li>
+        <li><strong>Sign out.</strong> Signing out in Settings removes the sign-in token and clears the local copy of
+          your games from the device.</li>
+        <li><strong>Delete your account.</strong> Email <a href="mailto:privacy@arpcentral.net?subject=Delete%20my%20Plates%20account">privacy@arpcentral.net</a>
+          from the Google account you signed in with, with the subject "Delete my Plates account". We will delete
+          your account, your profile details, the games and trips you own, and the finds and locations you logged in
+          other players' games, within 30 days. Games owned by other players continue without you.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Plates is intended for families on road trips but is not directed at children under 13, and it requires a
+        Google account to sign in. We do not knowingly collect personal information from children under 13. If you
+        believe a child has created an account, contact us and we will delete it.</p>
+
+      <h2>Security</h2>
+      <p>Access to a game is limited to the players seated in it. Sign-in tokens are stored on the server only as
+        cryptographic digests, and all traffic between the app and the server is encrypted in transit.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we change this policy we will update the date at the top of this page. Material changes will also be
+        noted in the app's Play Store listing.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about privacy or your data: <a href="mailto:privacy@arpcentral.net">privacy@arpcentral.net</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 arpcentral.net &middot; <a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
+      <p>Google Play is a trademark of Google LLC.</p>
+    </div>
+  </footer>
+</body>
+</html>

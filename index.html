@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plates</title>
+  <meta name="description" content="Plates is the road-trip licence plate game for Android, scored by how far each plate travelled to reach you.">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <meta property="og:title" content="Plates">
+  <meta property="og:description" content="The road-trip licence plate game, scored by how far each plate travelled.">
+  <meta property="og:image" content="images/feature-graphic.png">
+  <style>
+    :root {
+      --plate-blue: #244A95;
+      --ring-navy: #002D72;
+      --night-blue: #121A2B;
+      --amber: #F2A93B;
+      --amber-dark: #D98A1E;
+      --teal: #2E8C8C;
+      --sheeting: #F4F1EA;
+      --disc-grey: #CCCCCC;
+      --bg: var(--sheeting);
+      --fg: #1B1B1F;
+      --muted: #47464A;
+      --card: #FFFFFF;
+      --link: var(--plate-blue);
+      --accent-text: var(--amber-dark);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: var(--night-blue);
+        --fg: #E4E2DD;
+        --muted: #C4C7D2;
+        --card: #1C2740;
+        --link: #9DB6EE;
+        --accent-text: var(--amber);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Avenir Next", Avenir, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    a { color: var(--link); }
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 0 16px; }
+
+    header.hero {
+      background: linear-gradient(115deg, var(--night-blue) 0%, var(--plate-blue) 100%);
+      color: var(--sheeting);
+      padding: 24px 0 40px;
+    }
+    header.hero img.feature {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+    .cta {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--amber);
+      color: var(--night-blue);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+    }
+    .btn:hover { background: #F7BB5E; }
+    .cta p { margin: 0; color: #D6E0F7; }
+
+    section { padding: 40px 0; }
+    section + section { border-top: 1px solid rgba(128, 128, 128, 0.25); }
+    h1, h2 { margin: 0 0 12px; line-height: 1.2; }
+    h2 { font-size: 1.6rem; }
+    .lead { font-size: 1.15rem; max-width: 46rem; margin: 0; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .step {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .step .num {
+      display: inline-block;
+      width: 32px; height: 32px; line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--plate-blue);
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .step p { margin: 0; color: var(--muted); }
+    .points { color: var(--accent-text); font-weight: 700; }
+
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      max-width: 620px;
+    }
+    .shots img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    .shots figcaption { margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+
+    footer {
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(128, 128, 128, 0.25);
+    }
+    footer p { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <img class="feature" src="images/feature-graphic.png" width="1024" height="500"
+           alt="Plates: the road-trip licence plate game, scored by how far each plate travelled. Up to 4 players, hands-free voice, map trail.">
+      <div class="cta">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=net.arpcentral.tectonics">Get it on Google Play</a>
+        <p>Free for Android. Sign in with Google to play with friends.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h1>The licence plate game, with a score</h1>
+      <p class="lead">
+        Plates turns the classic road-trip game into a race for points. Spot a plate from another
+        state, tap it, and it's yours. The further that plate has travelled to reach you, the more
+        it's worth.
+      </p>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="num">1</span>
+          <h3>Spot a plate</h3>
+          <p>All 50 states and DC are on the board. Tap the state the moment you see it, or tap the mic and just say it.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3>Score by distance</h3>
+          <p>Points are based on the distance from where you are to the plate's home state.
+            A neighbour is worth <span class="points">a point or two</span>; Hawaii in the Midwest is worth
+            <span class="points">a lot</span>. Bonus plates pay <span class="points">2×</span>.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3>Play together</h3>
+          <p>Seat up to four players, as a team or head to head. Group games into a trip, and look back at
+            your route on the map when the ride is over.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>On the road</h2>
+      <div class="shots">
+        <figure style="margin:0">
+          <img src="images/screenshot-board.png" alt="The Plates board, a grid of state licence plates with found plates highlighted" loading="lazy">
+          <figcaption>The board: tap a plate to claim it.</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <img src="images/screenshot-map.png" alt="A map showing markers where each plate was spotted, joined into a trail" loading="lazy">
+          <figcaption>Every find drops a marker on your trail.</figcaption>
+        </figure>
+      </div>
+      <p>Plates works offline on the road and syncs when you're back in range.
+        Drivers: keep your eyes on the road. Plates is best played by passengers.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 arpcentral.net &middot; <a href="privacy.html">Privacy Policy</a></p>
+      <p>Google Play is a trademark of Google LLC.</p>
+    </div>
+  </footer>
+</body>
+</html>
